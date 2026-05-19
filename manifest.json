@@ -1,0 +1,22 @@
+{
+  "name": "Cura Marketing — Training Hub",
+  "short_name": "Cura Training",
+  "description": "The complete Cura Marketing sales training system",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
