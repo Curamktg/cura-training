@@ -607,7 +607,7 @@
   </div>
 
   <div class="video-list">
-    <div class="video-card featured" onclick="openModal('The Perfect Opener', 'Watch a full door approach from walk-up to opener. Commentary covers body language, tone, and how to handle the first 10 seconds at the door.')">
+   <div class="video-card featured" onclick="openModal('The Perfect Opener', 'Watch a full door approach from walk-up to opener. Commentary covers body language, tone, and how to handle the first 10 seconds at the door.', 'https://www.youtube.com/embed/ATdb-Xf8xK0')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">New</div>
@@ -991,9 +991,8 @@
       <div class="modal-title" id="modalTitle">Video Title</div>
       <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
     </div>
-    <div class="modal-video">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M9 21l3-4 3 4"/></svg>
-      <span>Video player — add your YouTube or Vimeo link here</span>
+    <div class="modal-video" id="modalVideoContainer">
+</div>
     </div>
     <div class="modal-body">
       <div class="modal-desc" id="modalDesc"></div>
@@ -1017,14 +1016,17 @@ function toggleChapter(card) {
   if (!isOpen) card.classList.add('open');
 }
 
-function openModal(title, desc) {
+function openModal(title, desc, videoUrl) {
   document.getElementById('modalTitle').textContent = title;
   document.getElementById('modalDesc').textContent = desc;
+  const container = document.getElementById('modalVideoContainer');
+  if (videoUrl) {
+    container.innerHTML = '<iframe width="100%" height="100%" src="' + videoUrl + '" frameborder="0" allowfullscreen style="aspect-ratio:16/9;display:block;"></iframe>';
+  } else {
+    container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:200px;color:rgba(255,255,255,0.4);font-size:14px;">Video coming soon</div>';
+  }
   document.getElementById('videoModal').classList.add('open');
   document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
   document.getElementById('videoModal').classList.remove('open');
   document.body.style.overflow = '';
 }
