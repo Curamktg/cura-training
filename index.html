@@ -609,7 +609,7 @@ Output
   </div>
 
   <div class="video-list">
-    <div class="video-card featured" onclick="openModal('AJ Barilla — PATP', 'Full live sale from AJ Barilla. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/syeejyr705ute6omjyhno/AJ-PATP-FULL.mov?rlkey=aq11hr3tnk5s8kmwpyb51vydx&st=y202wwfe&dl=1')">
+    <div class="video-card featured" onclick="openModal('AJ Barilla — PATP', 'Full live sale from AJ Barilla. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1bvEa1mWse5XC74YWG2xN58B6V5GJ5hiH/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -621,7 +621,7 @@ Output
       </div>
     </div>
 
-    <div class="video-card" onclick="openModal('Alaka\'i Watson — PATP', 'Full live sale from Alaka\'i Watson. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/av0dw5dzpann6o9f660fs/Alaka-i-Watson-PATP.MOV?rlkey=byxbxmshogpfv2g75eqfxv4du&st=bux5301w&dl=1')">
+    <div class="video-card" onclick="openModal('Alaka\'i Watson — PATP', 'Full live sale from Alaka\'i Watson. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1gHUtqXrpOdLxK_5pP6yvPVAX_aTiHpjO/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -633,7 +633,7 @@ Output
       </div>
     </div>
 
-    <div class="video-card" onclick="openModal('Alex Winsor — PATP', 'Full live sale from Alex Winsor. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/svyev53hgyx7xpa6zy1ki/Alex-Winsor-PATP.MOV?rlkey=o1km5o59vi7vgjcvwjrulmeey&st=cnh4l2v8&dl=1')">
+    <div class="video-card" onclick="openModal('Alex Winsor — PATP', 'Full live sale from Alex Winsor. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1VX2TAMt8R5oobRPsdyLmKHrSDY8r71ZA/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -645,7 +645,7 @@ Output
       </div>
     </div>
 
-    <div class="video-card" onclick="openModal('Guy Visconti — PATP', 'Full live sale from Guy Visconti. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/lbzc0r8kbqn077je68cuf/Guy-Visconti-PATP.MOV?rlkey=4rz6cfac6tmmctzwrzweiocwe&st=h5mv4j7i&dl=1')">
+    <div class="video-card" onclick="openModal('Guy Visconti — PATP', 'Full live sale from Guy Visconti. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1KMVgdaJSPe-58ROg87kGyBTFzi7m9Ud3/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -657,7 +657,7 @@ Output
       </div>
     </div>
 
-    <div class="video-card" onclick="openModal('Nalu Flores — PATP', 'Full live sale from Nalu Flores. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/30hhgd5yj48l0uyerv1d0/Nalu-Flores-PATP.MOV?rlkey=vvyjqegqt97di63kvnlfx147d&st=tx4fkd6w&dl=1')">
+    <div class="video-card" onclick="openModal('Nalu Flores — PATP', 'Full live sale from Nalu Flores. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1Axwt1W8uF3h5jjqm0WmCEHBYNKAyNp-1/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -669,7 +669,7 @@ Output
       </div>
     </div>
 
-    <div class="video-card" onclick="openModal('Zac Kornfeld — PATP', 'Full live sale from Zac Kornfeld. Watch the pitch from start to close and study every move.', 'https://www.dropbox.com/scl/fi/e14sv25gnvitw7wq2gytm/Zac-Kornfeld-PATP.mov?rlkey=ssazp8m3cl7bbohulvfbxmg8r&st=oujbv8im&dl=1')">
+    <div class="video-card" onclick="openModal('Zac Kornfeld — PATP', 'Full live sale from Zac Kornfeld. Watch the pitch from start to close and study every move.', 'https://drive.google.com/file/d/1Q7mJE878-OhIF-g8LskDrfL9FarAFXu7/preview')">
       <div class="video-thumb">
         <div class="thumb-bg"><div class="thumb-pattern"></div></div>
         <div class="thumb-label">Live Sale</div>
@@ -1044,7 +1044,7 @@ function openModal(title, desc, videoUrl) {
   document.getElementById('modalDesc').textContent = desc;
   const container = document.getElementById('modalVideoContainer');
   if (videoUrl) {
-    container.innerHTML = '<video controls style="width:100%;display:block;" src="' + videoUrl + '"></video>';
+    container.innerHTML = '<iframe src="' + videoUrl + '" width="100%" style="aspect-ratio:16/9;display:block;border:none;" allowfullscreen allow="autoplay"></iframe>';
   } else {
     container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:200px;color:rgba(255,255,255,0.4);font-size:14px;">Video coming soon</div>';
   }
