@@ -1040,16 +1040,9 @@ function toggleChapter(card) {
 }
 
 function openModal(title, desc, videoUrl) {
-  document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalDesc').textContent = desc;
-  const container = document.getElementById('modalVideoContainer');
   if (videoUrl) {
-    container.innerHTML = '<iframe src="' + videoUrl + '" width="100%" style="aspect-ratio:16/9;display:block;border:none;" allowfullscreen allow="autoplay"></iframe>';
-  } else {
-    container.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:200px;color:rgba(255,255,255,0.4);font-size:14px;">Video coming soon</div>';
+    window.open(videoUrl, '_blank');
   }
-  document.getElementById('videoModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
